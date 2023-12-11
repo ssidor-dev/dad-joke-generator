@@ -1,0 +1,278 @@
+:root {
+  /*Font Family*/
+  --ff-default: "Sono", sans-serif;
+  /* Font Size & Weight */
+  --fs-small: 1rem;
+  --fs-large: 2rem;
+
+  --fw-500: 500;
+  --fw-800: 800;
+
+  /* Primary and Secondary colors */
+
+  /* 
+  Possible alt backgroud colors:
+  0aff99
+  f72585
+  ffea00
+  fee440
+  #9cfa68
+  #32f920
+  #00ff5b
+  	#ffff99
+    #fffa00
+  */
+
+  --clr-primary-400: 265, 82.6%, 57.3%;
+  --clr-primary-300: 216.9, 100%, 61.4%;
+  --clr-primary-100: 208, 100%, 97%;
+
+  --clr-secondary-500: 153.2, 100%, 50%;
+  --clr-secondary-300: 101.4, 100%, 71.6%;
+  --clr-secondary-800: 218, 58%, 31%;
+
+  --clr-btn-primary-600: rgba(23, 191, 116, 1) 0%;
+  --clr-btn-primary-500: rgba(89, 228, 27, 1) 100%;
+
+  --clr-btn-hover-primary-600: rgba(4, 149, 84, 1) 0%;
+  --clr-btn-hover-primary-500: rgba(62, 185, 7, 1) 100%;
+
+  --clr-btn-secondary-200: rgba(112, 207, 218, 1) 0%;
+  --clr-btn-secondary-100: rgba(184, 184, 254, 1) 100%;
+
+  --clr-btn-hover-secondary-200: rgba(81, 153, 162, 1) 0%;
+  --clr-btn-hover-secondary-100: rgba(137, 137, 219, 1) 100%;
+  --clr-btn-warning: rgb(248, 3, 3);
+  /* Gradient Colors */
+
+  --clr-gradient-primary: linear-gradient(
+    hsl(var(--clr-primary-400)),
+    hsl(var(--clr-primary-300))
+  );
+  --clr-gradient-background: linear-gradient(
+    hsl(var(--clr-secondary-500), 0.3),
+    hsl(var(--clr-secondary-300), 0.3)
+  );
+
+  /* Button gradient colors */
+
+  --clr-gradient-btn-joke: linear-gradient(
+    0deg,
+    var(--clr-btn-primary-600),
+    var(--clr-btn-primary-500)
+  );
+
+  --clr-gradient-btn-save: linear-gradient(
+    0deg,
+    var(--clr-btn-secondary-200),
+    var(--clr-btn-secondary-100)
+  );
+
+  /* Hover gradient colors */
+  --clr-gradient-btn-hover-joke: linear-gradient(
+    0deg,
+    var(--clr-btn-hover-primary-600),
+    var(--clr-btn-hover-primary-500)
+  );
+  --clr-gradient-btn-hover-save: linear-gradient(
+    0deg,
+    var(--clr-btn-hover-secondary-200),
+    var(--clr-btn-hover-secondary-100)
+  );
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  /* height: 100%; */
+  min-height: 100vh;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+h1,
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background: var(--clr-gradient-background);
+  font-family: var(--ff-default);
+  color: hsl(var(--clr-primary-100));
+  display: grid;
+  place-items: start center;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: var(--ff-default);
+  color: black;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-800);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.flex-container {
+  background: var(--clr-gradient-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0 0 35px 35px;
+  box-shadow: 1.25rem 1.25rem 2rem hsl(var(--clr-secondary-800), 0.35);
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.joke-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 8rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  /* color: hsl(var(--clr-primary-100)); */
+}
+
+.btn-group {
+  text-align: center;
+  font-family: var(--ff-default);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-500);
+}
+
+.get-joke {
+  margin-top: 2rem;
+  border: none;
+  padding: 0.75rem 1.75rem;
+  border-radius: 52rem;
+  background: var(--clr-gradient-btn-joke);
+  color: hsl(var(--clr-primary-100));
+}
+
+.get-joke:hover {
+  background: var(--clr-gradient-btn-hover-joke);
+  color: hsl(var(--clr-primary-100));
+}
+
+.save-joke {
+  border: none;
+  padding: 0.75rem 1.75rem;
+  border-radius: 52rem;
+  background: var(--clr-gradient-btn-save);
+  /* background: linear-gradient(0deg, rgba(124,221,232,1) 0%, rgba(212,212,255,1) 100%); */
+  /* background: linear-gradient(0deg, rgba(153,244,255,1) 0%, rgba(213,213,255,1) 100%); */
+  color: hsl(var(--clr-primary-100));
+}
+
+.save-joke:hover {
+  background: var(--clr-gradient-btn-hover-save);
+}
+
+.saved-jokes {
+  color: black;
+  text-align: center;
+  place-items: start center;
+  height: auto;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.clear-btn {
+  border: none;
+  background: transparent;
+  display: flex;
+  text-decoration: underline;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+.clear-btn:hover {
+  color: blue;
+}
+
+.clear-btn-warning {
+  color: var(--clr-btn-warning)
+}
+
+@media (min-width: 600px) {
+  .flex-container {
+    border-radius: 35px;
+    width: 600px;
+    height: 450px;
+    margin-top: 3rem;
+  }
+  .saved-jokes {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 600px;
+  }
+}
+
