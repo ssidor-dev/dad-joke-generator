@@ -1,1 +1,1 @@
-# dad-joke-generator
+The dad-joke-generator app allows the user to click on the New Dad Joke button which leverages the icanhazdadjoke API which provides a random dad joke. This application also allows the user to save up to 4 jokes and if the end user tries to save a 5th joke the "Clear Saved Jokes" button color is changed to red and the "Save Joke" button is disabled. This application is built using HTML, CSS, and Vanilla JavaScript.
